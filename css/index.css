@@ -29,8 +29,8 @@
 .nav {
   height: 116px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .logo {
   font-family: "Homemade Apple";
@@ -45,6 +45,7 @@
   color: #000;
   font-size: 18px;
   justify-content: space-between;
+  padding-left: 0;
 }
 .nav__list li {
   padding: 0 40px;
@@ -104,7 +105,6 @@
   background-color: #f7941e;
   color: #000;
   border: 1px solid #000;
-  margin-left: 20px;
 }
 
 /* section */
@@ -124,6 +124,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 50px;
 }
 .col {
   display: flex;
@@ -150,17 +151,21 @@
 
 @media screen and (max-width: 786px) {
   .section {
-    display: flex;
     flex-direction: column;
+  }
+  .sec-2 {
+    flex-direction: column-reverse;
   }
 }
 
 /* card */
 .card {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   max-width: 1118px;
   margin: 0 auto;
+  gap: 30px;
+  padding: 0 135px;
 }
 
 .card__header {
@@ -175,17 +180,29 @@
 .card__para {
   margin-bottom: 64px;
 }
+.card-material {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 166px;
+  background-color: #fafafa;
+}
+.card-material:hover {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card img {
+  width: 100%;
+}
 .see-more {
   text-decoration: none;
   font-weight: normal;
   font-size: 14px;
-  padding-left: 24px;
 }
 .card-h2 {
   font-weight: normal;
   font-size: 20px;
-  padding-left: 24px;
-  margin-bottom: 74px;
 }
 
 @media screen and (max-width: 768px) {
@@ -193,6 +210,11 @@
     flex-direction: column;
     align-items: center;
   }
+  .card-material {
+    justify-content: space-evenly;
+    height: 100px;
+  }
+  
 }
 
 /* plane */
@@ -204,18 +226,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
+  padding: 0 30px;
 }
+
 .plane__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 .plane__buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 16px;
+  flex: 1;
 }
 .plane__header {
   font-size: 32px;
@@ -226,7 +252,7 @@
   font-weight: normal;
 }
 
-@media screen and (max-width = 768px) {
+@media screen and (max-width: 768px) {
   .plane__buttons {
     display: flex;
     flex-direction: column;
@@ -247,26 +273,33 @@
 .blog__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  padding-left: 78px;
-  padding-right: 150px;
+  padding: 60px ;
+  flex: 2;
 }
 .blog__heading {
   font-weight: normal;
   font-size: 48px;
   margin-top: 27px;
-  margin-bottom: 60px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .blog {
+    flex-direction: column;
+  }
 }
 
 /* wide card */
 .wide-card {
   margin-top: 40px;
-  height: 290px;
   width: 560px;
   padding: 50px;
 }
-.wide-card-shadow {
+.wide-card:hover {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 .card-group {
@@ -304,6 +337,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 .footer .logo {
   padding-right: 80px;
